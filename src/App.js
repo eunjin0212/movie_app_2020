@@ -8,11 +8,11 @@ import "./App.css";
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename='home'>
       <Navigation />
-      <Route path='./' basename='home' exact={true} component={Home} />
-      <Route path='./about' component={About} />
-      <Route path='./movie/:id' component={Detail} />
+      <Route path='/' exact={true} component={Home} />
+      <Route path='/about' component={About} />
+      <Route path='/movie/:id' component={Detail} />
     </HashRouter>
   );
 }
